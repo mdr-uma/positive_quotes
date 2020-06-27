@@ -12,10 +12,4 @@ class Quote {
         quotes.appendChild(div)
         return quotes;
     }
-
-    // renderQuotes() {
-    //     let div = document.querySelector(".quotes")
-    //     div.innerHTML = `<p>${this.phrase}</p>`
-    //     quotes.appendChild(div)
-    // }
 }
