@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <title>Positive Quotes</title>
+</head>
+
+<body>
+    <div class="header"><img class="header_img" src="images/header_img.jpg"></div>
+    <h3>Positive Quotes</h3>
+    <div class="side-bar">
+        <div><img class="sidebar-img" src="images/img1.png"></div>
+        <br>
+        <div><img class="sidebar-img" src="images/img2.png"></div>
+        <br>
+        <div><img class="sidebar-img" src="images/img3.png"></div>
+        <br>
+        <div><img class="sidebar-img" src="images/img4.png"></div>
+    </div>
+    <div class="category-container" id="category-name">
+        <h4>CATEGORIES</h4>
+    </div>
+
+    <form class="form-container">
+        <h5>Select Category Below:</h5>
+        <input type="radio">Motivational
+        <input type="radio">Success
+        <input type="radio">For Students
+        <input type="radio">Funny
+        <br><br>
+        <input type="text" id="button">
+        <input type="submit" value="Create Your Own Quote">
+    </form>
+
+    <div class="quotes">
+
+    </div>
+
+
+    <div>
+        <footer class="footer">
+            <hr> Copyright © Positive Quotes 2020
+        </footer>
+    </div>
+    <script type="text/javascript" src="src/components/category.js"></script>
+    <script src="src/components/quote.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/adapters/api_service.js"></script>
+    <script src="src/index.js"></script>
+</body>
+
+</html>

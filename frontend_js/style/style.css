@@ -1,0 +1,129 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    position: relative;
+    /* min-height: 100vh; */
+}
+
+body::after {
+    content: "";
+    background: center url('https://i.pinimg.com/originals/d8/65/02/d865029768c8bdf02d8e21ca3e7afb9b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.header_img {
+    width: 100%;
+    height: 100%;
+    /* box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1); */
+    opacity: .9;
+}
+
+h3 {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #c7ab0c;
+    font-size: 25px;
+    letter-spacing: 16px;
+}
+
+h4 {
+    text-align: center;
+    color: #057440;
+    letter-spacing: 8px;
+    font-size: 20px;
+}
+
+h5 {
+    text-align: center;
+    color: #057440;
+    letter-spacing: 4px;
+    font-size: 18px;
+}
+
+.header {
+    margin-top: -15px;
+    /* position: fixed; */
+    width: 100%;
+    height: 40%;
+}
+
+.category-container {
+    position: absolute;
+    bottom: 30%;
+    left: 83%;
+    list-style-type: none;
+    /* background-color: rgb(165, 241, 238); */
+    /* padding: 40px; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1); */
+}
+
+li {
+    font-size: 23px;
+    font-family: monospace;
+    color: royalblue;
+    text-align: center;
+    line-height: 55px;
+    cursor: pointer;
+}
+
+li:hover {
+    color: rgb(228, 85, 233);
+}
+
+.sidebar-img {
+    position: relative;
+    top: 70%;
+    left: 3%;
+    width: 100px;
+    border-style: solid;
+    border-color: white;
+    border-width: 7px;
+}
+
+.quotes {
+    position: absolute;
+    text-align: center;
+    position: relative;
+    bottom: 550px;
+    width: 300px;
+}
+
+.form-container {
+    text-align: center;
+    position: relative;
+    bottom: 80px;
+}
+
+[type='text'] {
+    height: 30px;
+    width: 500px;
+    border-radius: 3px;
+}
+
+[type='submit'] {
+    background-color: rgba(31, 179, 31, 0.829);
+    color: rgb(34, 33, 33);
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+}
