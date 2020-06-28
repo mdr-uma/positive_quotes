@@ -5,11 +5,18 @@ class Quote {
         this.categoryId = category_id
     }
 
-    get display() {
+    get displayPhrase() {
         let quotes = document.querySelector(".quotes")
         let div = document.createElement("div")
         div.innerHTML = `<p>${this.phrase}</p>`
         quotes.appendChild(div)
         return quotes;
     }
+
+    // static createNewQuote() {
+    //     let form = document.querySelector(".form-container")
+    //     form.addEventListener("submit", function(e) {
+    //         e.preventDefault();
+    //     })
+    // }
 }
