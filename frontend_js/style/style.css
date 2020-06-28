@@ -7,7 +7,6 @@
 body {
     display: block;
     position: relative;
-    /* min-height: 100vh; */
 }
 
 body::after {
@@ -63,9 +62,10 @@ h5 {
 }
 
 .category-container {
-    position: absolute;
-    bottom: 30%;
-    left: 83%;
+    position: relative;
+    bottom: 400px;
+    left: 1150px;
+    width: 250px;
     list-style-type: none;
     /* background-color: rgb(165, 241, 238); */
     /* padding: 40px; */
@@ -86,6 +86,18 @@ li:hover {
     color: rgb(228, 85, 233);
 }
 
+p {
+    text-align: left;
+    color: purple;
+    line-height: 35px;
+    background-color: wheat;
+    padding-left: 10px;
+}
+
+p:hover {
+    background-color: rgba(151, 238, 162, 0.678);
+}
+
 .sidebar-img {
     position: relative;
     top: 70%;
@@ -94,20 +106,28 @@ li:hover {
     border-style: solid;
     border-color: white;
     border-width: 7px;
+    cursor: pointer;
+}
+
+.sidebar-img:hover {
+    width: 140px;
 }
 
 .quotes {
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
     position: relative;
-    bottom: 550px;
-    width: 300px;
+    bottom: 850px;
+    left: 280px;
+    width: 800px;
+    max-height: 300px;
+    overflow-y: scroll;
 }
 
 .form-container {
     text-align: center;
     position: relative;
-    bottom: 80px;
+    bottom: 200px;
 }
 
 [type='text'] {
@@ -126,4 +146,5 @@ li:hover {
 
 .footer {
     text-align: center;
+    padding: 10px;
 }
