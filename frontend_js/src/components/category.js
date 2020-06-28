@@ -27,13 +27,8 @@ function categoryEventListener(li) {
             .then(result => {
                 result.quotes.map(quote => {
                     const newQuote = new Quote(quote)
-                    newQuote.display
+                    newQuote.displayPhrase
                 })
             })
-
-        // let div = document.createElement("div")
-        // div.innerHTML = `<p>${this.phrase}</p>`
-        // quotes.appendChild(div)
-
     })
 }
