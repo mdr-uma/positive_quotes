@@ -16,19 +16,26 @@ class Category {
         return div
     }
 }
-// let quotes = document.querySelector(".quotes")
 
 function categoryEventListener(li) {
     li.addEventListener('click', function(event) {
         event.preventDefault();
+        let quotes = document.querySelector(".quotes")
+        let oldDiv = document.getElementById("inner-quotes-div")
+        if (oldDiv) {
+            quotes.removeChild(oldDiv)
+        }
         const categoryId = event.target.id;
         const api = new ApiService;
         api.getQuotes(categoryId)
             .then(result => {
+                let div = document.createElement("div")
+                div.setAttribute("id", "inner-quotes-div")
                 result.quotes.map(quote => {
                     const newQuote = new Quote(quote)
-                    newQuote.displayPhrase
+                    newQuote.displayPhrase(div)
                 })
             })
     })
 }
+
