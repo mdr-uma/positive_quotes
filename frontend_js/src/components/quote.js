@@ -5,10 +5,11 @@ class Quote {
         this.categoryId = category_id
     }
 
-    get displayPhrase() {
+    displayPhrase(div) {
         let quotes = document.querySelector(".quotes")
-        let div = document.createElement("div")
-        div.innerHTML = `<p>${this.phrase}</p>`
+        let p = document.createElement("p")
+        p.innerText = `${this.phrase}`
+        div.appendChild(p)
         quotes.appendChild(div)
         return quotes;
     }
