@@ -13,7 +13,7 @@ class ApiService {
             .then(res => res.json())
     }
 
-    fetchCreateNewQuote() {
+    fetchCreateNewQuote(phrase, categoryId) {
         return fetch(`${this.baseUrl}quotes`, {
                 method: "POST",
                 headers: {
@@ -21,10 +21,10 @@ class ApiService {
                     "Accept": "application/json"
                 },
                 body: JSON.stringify({
-                    phrase: event.target[0].value,
-                    categoryId: event.target[1].value
+                    phrase: phrase,
+                    category_id: categoryId
                 })
             })
-            .then(res => res.json())
+            .then(response => response.json())
     }
 }
