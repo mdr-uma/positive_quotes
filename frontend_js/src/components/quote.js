@@ -12,11 +12,4 @@ class Quote {
         quotes.appendChild(div)
         return quotes;
     }
-
-    // static createNewQuote() {
-    //     let form = document.querySelector(".form-container")
-    //     form.addEventListener("submit", function(e) {
-    //         e.preventDefault();
-    //     })
-    // }
 }
