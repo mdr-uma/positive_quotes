@@ -111,6 +111,7 @@ p:hover {
 
 .sidebar-img:hover {
     width: 140px;
+    transition: all 0.7s ease;
 }
 
 .quotes {
