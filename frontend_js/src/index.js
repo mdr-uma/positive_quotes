@@ -22,13 +22,19 @@ function createNewQuote() {
         btn.addEventListener("click", function(e) {
             let categoryId = e.target.dataset.id;
             let form = document.querySelector(".form-container");
-
+            const button = document.getElementById("button");
             form.addEventListener("submit", function(e) {
                 e.preventDefault();
                 const phrase = e.target[4].value
                 api.fetchCreateNewQuote(phrase, categoryId)
-                    .then(response => console.log(response))
+                    .then(data => {
+                        let newQuote = new Quote(data)
+                        newQuote.displayPhrase
+                    })
+                button.value = ""
+                radioBtns.forEach(btn => btn.checked = false)
             })
         })
+
     })
 }
