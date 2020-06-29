@@ -6,8 +6,8 @@ class Quote {
     }
 
     displayPhrase(div) {
-        let quotes = document.querySelector(".quotes")
-        let p = document.createElement("p")
+        const quotes = document.querySelector(".quotes")
+        const p = document.createElement("p")
         p.innerText = `${this.phrase}`
         div.appendChild(p)
         quotes.appendChild(div)
