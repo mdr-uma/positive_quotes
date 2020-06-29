@@ -12,8 +12,8 @@ class QuotesController < ApplicationController
     end
 
     def create
-        quote = Quote.new(quote_params)
-            if quote.save
+        quote = Quote.create(quote_params)
+            if !!quote
                 render json: quote
             end
     end
@@ -26,6 +26,6 @@ class QuotesController < ApplicationController
 
     private
         def quote_params
-            params.require(:quote).permit(:pharse, :category, :like)
+            params.require(:quote).permit(:phrase, :category_id)
         end
 end
