@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
     getCatagory();
     createNewQuote();
 })
-
 const api = new ApiService;
 
 function getCatagory() {
@@ -15,26 +14,31 @@ function getCatagory() {
         })
 }
 
-function createNewQuote() {
+function selectedRadioValue() {
+    let radioVal;
     const radioBtns = Array.from(document.getElementsByClassName("radio"));
-
     radioBtns.forEach(btn => {
-        btn.addEventListener("click", function(e) {
-            let categoryId = e.target.dataset.id;
-            let form = document.querySelector(".form-container");
-            const button = document.getElementById("button");
-            form.addEventListener("submit", function(e) {
-                e.preventDefault();
-                const phrase = e.target[4].value
-                api.fetchCreateNewQuote(phrase, categoryId)
-                    .then(data => {
-                        let newQuote = new Quote(data)
-                        newQuote.displayPhrase
-                    })
-                button.value = ""
-                radioBtns.forEach(btn => btn.checked = false)
-            })
-        })
+        if (btn.checked === true) {
+            radioVal = btn.dataset.id
+        }
+    })
+    return radioVal;
+}
 
+function createNewQuote() {
+    let form = document.querySelector(".form-container");
+    const button = document.getElementById("button");
+    const radioBtns = Array.from(document.getElementsByClassName("radio"));
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const radioVal = selectedRadioValue();
+        const phrase = e.target[4].value
+        api.fetchCreateNewQuote(phrase, radioVal)
+            .then(data => {
+                let newQuote = new Quote(data)
+                newQuote.displayPhrase()
+            })
+        button.value = ""
+        radioBtns.forEach(btn => btn.checked = false)
     })
 }
