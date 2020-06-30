@@ -4,7 +4,6 @@ class Category {
         this.name = name
         this.quotes = quotes
     }
-
     get categoryName() {
         const div = document.getElementById("category-name")
         const li = document.createElement("li")
@@ -12,7 +11,6 @@ class Category {
         li.innerHTML = this.name
         categoryEventListener(li)
         div.appendChild(li)
-
         return div
     }
 }
@@ -33,9 +31,13 @@ function categoryEventListener(li) {
                 div.setAttribute("id", "inner-quotes-div")
                 result.quotes.map(quote => {
                     const newQuote = new Quote(quote)
-                    newQuote.displayPhrase(div)
+                    const quotes = document.querySelector(".quotes")
+                    const p = document.createElement("p")
+                    p.innerText = `${newQuote.phrase}`
+                    div.appendChild(p)
+                    quotes.appendChild(div)
+                    return quotes;
                 })
             })
     })
 }
-
