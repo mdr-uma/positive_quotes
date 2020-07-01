@@ -35,8 +35,12 @@ function createNewQuote() {
         const phrase = e.target[4].value
         api.fetchCreateNewQuote(phrase, radioVal)
             .then(data => {
-                let newQuote = new Quote(data)
-                newQuote.displayPhrase()
+                if (data.message) {
+                    alert(data.message.phrase[0])
+                } else {
+                    let newQuote = new Quote(data)
+                    newQuote.displayPhrase()
+                }
             })
         button.value = ""
         radioBtns.forEach(btn => btn.checked = false)

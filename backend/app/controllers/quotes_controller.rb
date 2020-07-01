@@ -12,10 +12,8 @@ class QuotesController < ApplicationController
     end
 
     def create
-        quote = Quote.create(quote_params)
-            if !!quote
-                render json: quote
-            end
+        quote = Quote.new(quote_params)
+        render json: quote.save ? quote : {message: quote.errors.messages}
     end
 
     # def update
