@@ -7,8 +7,6 @@ class Category {
     get categoryName() {
         const div = document.getElementById("category-name")
         const li = document.createElement("li")
-        li.classList.add('animate__animated', 'animate__fadeIn');
-        li.style.setProperty('--animate-duration', '3s');
         li.setAttribute("id", this.id)
         li.innerHTML = this.name
         categoryEventListener(li)
