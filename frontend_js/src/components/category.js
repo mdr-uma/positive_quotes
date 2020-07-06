@@ -7,6 +7,8 @@ class Category {
     get categoryName() {
         const div = document.getElementById("category-name")
         const li = document.createElement("li")
+        li.classList.add('animate__animated', 'animate__fadeIn');
+        li.style.setProperty('--animate-duration', '3s');
         li.setAttribute("id", this.id)
         li.innerHTML = this.name
         categoryEventListener(li)
@@ -33,6 +35,8 @@ function categoryEventListener(li) {
                     const newQuote = new Quote(quote)
                     const quotes = document.querySelector(".quotes")
                     const p = document.createElement("p")
+                    p.classList.add('animate__animated', 'animate__backInRight');
+                    p.style.setProperty('--animate-duration', '.8s');
                     p.innerText = `${newQuote.phrase}`
                     div.appendChild(p)
                     quotes.appendChild(div)
