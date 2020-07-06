@@ -16,12 +16,6 @@ class QuotesController < ApplicationController
         render json: quote.save ? quote : {message: quote.errors.messages}
     end
 
-    # def update
-    #     quote = Quote.find(params[:id])
-    #     quote.update(quote_params)
-    #     render json: quote
-    # end
-
     private
         def quote_params
             params.require(:quote).permit(:phrase, :category_id)
