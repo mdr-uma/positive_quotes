@@ -18,28 +18,41 @@ class Category {
 function categoryEventListener(li) {
     li.addEventListener('click', function(event) {
         event.preventDefault();
-        let quotes = document.querySelector(".quotes")
         let oldDiv = document.getElementById("inner-quotes-div")
         if (oldDiv) {
             quotes.removeChild(oldDiv)
         }
         const categoryId = event.target.id;
-        const api = new ApiService;
+        // const api = new ApiService;
         api.getQuotes(categoryId)
             .then(result => {
-                let div = document.createElement("div")
-                div.setAttribute("id", "inner-quotes-div")
-                result.quotes.map(quote => {
+                // console.log("result", result);
+
+                // let div = document.createElement("div")
+                // div.setAttribute("id", "inner-quotes-div")
+                return result.quotes.map(quote => {
                     const newQuote = new Quote(quote)
-                    const quotes = document.querySelector(".quotes")
-                    const p = document.createElement("p")
-                    p.classList.add('animate__animated', 'animate__backInRight');
-                    p.style.setProperty('--animate-duration', '.8s');
-                    p.innerText = `${newQuote.phrase}`
-                    div.appendChild(p)
-                    quotes.appendChild(div)
-                    return quotes;
+                    return newQuote.displayPhrase()
+                    newQuote.phraseToDom()
+                        // const p = document.createElement("p")
+                        // p.classList.add('animate__animated', 'animate__backInRight');
+                        // p.style.setProperty('--animate-duration', '.8s');
+                        // p.innerText = `${newQuote.phrase}`
+                        // div.appendChild(p)
+                        // quotes.appendChild(div)
+                        // return quotes;
                 })
             })
     })
 }
+
+// function phraseToDom() {
+//     const p = document.createElement("p")
+//     p.classList.add('animate__animated', 'animate__backInRight');
+//     p.style.setProperty('--animate-duration', '.8s');
+//     p.innerText = `${this.phrase}`
+//     div.appendChild(p)
+//     quotes.appendChild(div)
+//     return quotes;
+
+// }
