@@ -9,14 +9,12 @@ class Quote {
         if (document.getElementById("inner-quotes-div")) {
             quotes.removeChild(document.getElementById("inner-quotes-div"))
         }
-
         let div = document.createElement("div")
         div.setAttribute("id", "inner-quotes-div")
         const p = document.createElement("p")
         p.classList.add('animate__animated', 'animate__backInRight');
         p.style.setProperty('--animate-duration', '.8s');
         p.innerText = `${this.phrase}`
-
         div.appendChild(p)
         quotes.appendChild(div)
         return quotes;
