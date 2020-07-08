@@ -32,7 +32,7 @@ function createNewQuote() {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         const radioVal = selectedRadioValue();
-        const phrase = e.target[4].value
+        const phrase = e.target[5].value
         api.fetchCreateNewQuote(phrase, radioVal)
             .then(data => {
                 if (data.message) {
