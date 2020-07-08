@@ -33,7 +33,7 @@ function categoryEventListener(li) {
                 return result.quotes.map(quote => {
                     const newQuote = new Quote(quote)
                     return newQuote.displayPhrase()
-                    newQuote.phraseToDom()
+                        // newQuote.phraseToDom()
                         // const p = document.createElement("p")
                         // p.classList.add('animate__animated', 'animate__backInRight');
                         // p.style.setProperty('--animate-duration', '.8s');
