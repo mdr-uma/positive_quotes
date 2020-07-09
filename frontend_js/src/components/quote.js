@@ -5,9 +5,10 @@ class Quote {
         this.categoryId = category_id
     }
     displayPhrase() {
-        const quotes = document.querySelector(".quotes")
-        if (document.getElementById("inner-quotes-div")) {
-            quotes.removeChild(document.getElementById("inner-quotes-div"))
+        // const quotes = document.querySelector(".quotes")
+        const innerDiv = document.getElementById("inner-quotes-div")
+        if (innerDiv) {
+            quotes.removeChild(innerDiv)
         }
         let div = document.createElement("div")
         div.setAttribute("id", "inner-quotes-div")

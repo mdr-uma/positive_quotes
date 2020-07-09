@@ -15,23 +15,22 @@ class Category {
     }
 }
 
+let quotes = document.querySelector(".quotes")
+
 function categoryEventListener(li) {
     li.addEventListener('click', function(event) {
         event.preventDefault();
-        let quotes = document.querySelector(".quotes")
         let oldDiv = document.getElementById("inner-quotes-div")
         if (oldDiv) {
             quotes.removeChild(oldDiv)
         }
         const categoryId = event.target.id;
-        const api = new ApiService;
         api.getQuotes(categoryId)
             .then(result => {
                 let div = document.createElement("div")
                 div.setAttribute("id", "inner-quotes-div")
                 result.quotes.map(quote => {
                     const newQuote = new Quote(quote)
-                    const quotes = document.querySelector(".quotes")
                     const p = document.createElement("p")
                     p.classList.add('animate__animated', 'animate__backInRight');
                     p.style.setProperty('--animate-duration', '.8s');
