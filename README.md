@@ -13,6 +13,10 @@ To use this app, clone this repo and execute:
     Step 2. $ rails db:create
     
     Step 3. $ rails db:seed
+    
+    Step 4. $ rails s
+    
+    Step 5. $ open index.html or copy path from your html file and paste it in the browser
 
 ### Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/mdr-uma/positive_quotes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
