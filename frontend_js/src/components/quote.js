@@ -5,16 +5,12 @@ class Quote {
         this.id = id
         this.phrase = phrase
         this.categoryId = category_id
-            // this.displayPhrase()
     }
     displayPhrase() {
-        if (document.getElementById("inner-quotes-div")) {
-            quotes.removeChild(document.getElementById("inner-quotes-div"))
+        const innerDiv = document.getElementById("inner-quotes-div")
+        if (innerDiv) {
+            quotes.removeChild(innerDiv)
         }
-        this.phraseToDom()
-    }
-
-    phraseToDom() {
         let div = document.createElement("div")
         div.setAttribute("id", "inner-quotes-div")
         const p = document.createElement("p")
@@ -24,7 +20,5 @@ class Quote {
         div.appendChild(p)
         quotes.appendChild(div)
         return quotes;
-
-
     }
 }
