@@ -1,5 +1,3 @@
-const quotes = document.querySelector(".quotes")
-
 class Quote {
     constructor({ id, phrase, category_id }) {
         this.id = id
