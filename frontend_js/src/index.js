@@ -32,17 +32,21 @@ function createNewQuote() {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         const radioVal = selectedRadioValue();
-        const phrase = e.target[4].value
+        const phrase = e.target[5].value
         api.fetchCreateNewQuote(phrase, radioVal)
             .then(data => {
-                if (data.message) {
-                    alert(data.message.phrase[0])
-                } else {
-                    let newQuote = new Quote(data)
-                    newQuote.displayPhrase()
-                }
+                checkError(data)
             })
         button.value = ""
         radioBtns.forEach(btn => btn.checked = false)
     })
+}
+
+function checkError(data) {
+    if (data.message) {
+        alert(data.message.phrase[0])
+    } else {
+        let newQuote = new Quote(data)
+        newQuote.displayPhrase()
+    }
 }
