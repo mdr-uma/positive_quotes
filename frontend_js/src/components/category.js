@@ -27,18 +27,22 @@ function categoryEventListener(li) {
         const categoryId = event.target.id;
         api.getQuotes(categoryId)
             .then(result => {
-                let div = document.createElement("div")
-                div.setAttribute("id", "inner-quotes-div")
-                result.quotes.map(quote => {
-                    const newQuote = new Quote(quote)
-                    const p = document.createElement("p")
-                    p.classList.add('animate__animated', 'animate__backInRight');
-                    p.style.setProperty('--animate-duration', '.8s');
-                    p.innerText = `${newQuote.phrase}`
-                    div.appendChild(p)
-                    quotes.appendChild(div)
-                    return quotes;
-                })
+                appendResult(result)
             })
+    })
+}
+
+function appendResult(result) {
+    let div = document.createElement("div")
+    div.setAttribute("id", "inner-quotes-div")
+    result.quotes.map(quote => {
+        const newQuote = new Quote(quote)
+        const p = document.createElement("p")
+        p.classList.add('animate__animated', 'animate__backInRight');
+        p.style.setProperty('--animate-duration', '.8s');
+        p.innerText = `${newQuote.phrase}`
+        div.appendChild(p)
+        quotes.appendChild(div)
+        return quotes;
     })
 }
