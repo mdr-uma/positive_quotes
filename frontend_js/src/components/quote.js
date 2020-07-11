@@ -5,7 +5,6 @@ class Quote {
         this.categoryId = category_id
     }
     displayPhrase() {
-        // const quotes = document.querySelector(".quotes")
         const innerDiv = document.getElementById("inner-quotes-div")
         if (innerDiv) {
             quotes.removeChild(innerDiv)
