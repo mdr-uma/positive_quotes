@@ -50,3 +50,4 @@ function checkError(data) {
         newQuote.displayPhrase()
     }
 }
+
