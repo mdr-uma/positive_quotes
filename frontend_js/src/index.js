@@ -9,7 +9,7 @@ function getCatagory() {
         .then(data => {
             data.forEach(d => {
                 const newCategory = new Category(d)
-                newCategory.categoryName
+                newCategory.categoryName()
             })
         })
 }
@@ -50,4 +50,3 @@ function checkError(data) {
         newQuote.displayPhrase()
     }
 }
-

@@ -4,7 +4,8 @@ class Category {
         this.name = name
         this.quotes = quotes
     }
-    get categoryName() {
+
+    categoryName() {
         const div = document.getElementById("category-name")
         const li = document.createElement("li")
         li.setAttribute("id", this.id)
