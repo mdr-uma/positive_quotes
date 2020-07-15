@@ -9,7 +9,7 @@ class Quote {
         if (innerDiv) {
             quotes.removeChild(innerDiv)
         }
-        let div = document.createElement("div")
+        const div = document.createElement("div")
         div.setAttribute("id", "inner-quotes-div")
         const p = document.createElement("p")
         p.classList.add('animate__animated', 'animate__backInRight');
