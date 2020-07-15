@@ -26,7 +26,7 @@ function selectedRadioValue() {
 }
 
 function createNewQuote() {
-    let form = document.querySelector(".form-container");
+    const form = document.querySelector(".form-container");
     const button = document.getElementById("button");
     const radioBtns = Array.from(document.getElementsByClassName("radio"));
     form.addEventListener("submit", function(e) {
@@ -46,7 +46,7 @@ function checkError(data) {
     if (data.message) {
         alert(data.message.phrase[0])
     } else {
-        let newQuote = new Quote(data)
+        const newQuote = new Quote(data)
         newQuote.displayPhrase()
     }
 }

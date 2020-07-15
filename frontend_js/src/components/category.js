@@ -16,12 +16,12 @@ class Category {
     }
 }
 
-let quotes = document.querySelector(".quotes")
+const quotes = document.querySelector(".quotes")
 
 function categoryEventListener(li) {
     li.addEventListener('click', function(event) {
         event.preventDefault();
-        let oldDiv = document.getElementById("inner-quotes-div")
+        const oldDiv = document.getElementById("inner-quotes-div")
         if (oldDiv) {
             quotes.removeChild(oldDiv)
         }
@@ -34,7 +34,7 @@ function categoryEventListener(li) {
 }
 
 function appendResult(result) {
-    let div = document.createElement("div")
+    const div = document.createElement("div")
     div.setAttribute("id", "inner-quotes-div")
     result.quotes.map(quote => {
         const newQuote = new Quote(quote)
