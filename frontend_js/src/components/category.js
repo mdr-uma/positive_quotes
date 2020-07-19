@@ -29,17 +29,21 @@ function categoryEventListener(li) {
         api.getQuotes(categoryId)
             .then(result => {
                 appendResult(result)
-                sortBy(result.quotes);
             })
     })
 }
 
 function appendResult(result) {
-    const divQuote = document.querySelector(".quotes")
-    while (divQuote.firstChild) {
-        divQuote.removeChild(divQuote.firstChild)
-    }
+    const div = document.createElement("div")
+    div.setAttribute("id", "inner-quotes-div")
     result.quotes.map(quote => {
-        sortRender(quote)
+        const newQuote = new Quote(quote)
+        const p = document.createElement("p")
+        p.classList.add('animate__animated', 'animate__backInRight');
+        p.style.setProperty('--animate-duration', '.8s');
+        p.innerText = `${newQuote.phrase}`
+        div.appendChild(p)
+        quotes.appendChild(div)
+        return quotes
     })
 }
