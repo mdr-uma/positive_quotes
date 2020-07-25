@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     getCatagory();
     createNewQuote();
-    // sortBy();
 })
 const api = new ApiService;
 
@@ -66,15 +65,6 @@ function sortBy(quotes) {
 
         sortedQuotes.forEach(quote => {
             sortRender(quote)
-                // const div = document.createElement("div")
-                // div.setAttribute("id", "inner-quotes-div")
-                // const newQuote = new Quote(quote)
-                // const p = document.createElement("p")
-                // p.classList.add('animate__animated', 'animate__backInRight');
-                // p.style.setProperty('--animate-duration', '.8s');
-                // p.innerText = `${newQuote.phrase}`
-                // div.appendChild(p)
-                // divQuote.appendChild(div)
         })
     })
     return divQuote

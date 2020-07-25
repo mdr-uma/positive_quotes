@@ -18,9 +18,8 @@ class Category {
 
 const quotes = document.querySelector(".quotes")
 
-function categoryEventListener(li) {
-    li.addEventListener('click', function(event) {
-        event.preventDefault();
+const categoryEventListener = (li) => {
+    li.addEventListener('click', (event) => {
         const oldDiv = document.getElementById("inner-quotes-div")
         if (oldDiv) {
             quotes.removeChild(oldDiv)
