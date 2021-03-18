@@ -1,6 +1,6 @@
 # Positive Quotes
 
-This JS/RAILS portfolio app is about Positivity, built with Rails backend and Javascript frontend. I built this app to stay positive and motivated in the current climate of the world, where a lot of negativities are spiralling around. Users can simply go to the app and use it without having them to sign up or login. It's as simple as that. There are some categories Users can pick and go through all the positive quotes it has and if they feel inspired they can create their own positive quotes to inspire others. This is all about spreading positivity. I hope you guys enjoy it.
+This JS/RAILS app is about Positivity, built with Rails backend and Javascript frontend. I built this app to stay positive and motivated in the current climate of the world, where a lot of negativities are spiralling around. Users can simply go to the app and use it without having them to sign up or login. There are some categories Users can pick and go through all the positive quotes that has and, if they feel inspired they can create their own positive quotes to inspire others. This is all about spreading positivity. I hope you guys enjoy it. Stay positive.
 
 <img src="images/positive-quote-bg.png" alt="image"/>
 
